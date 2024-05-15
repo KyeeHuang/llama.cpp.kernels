@@ -1,3 +1,4 @@
+// gridDim = {1, 32, 1}, blockDim = {32, 1, 1}
 static __global__ void soft_max_f32(const float* x, float* dst, const int ncols) {
   const int row = blockDim.y * blockIdx.y + threadIdx.y;
   const int block_size = blockDim.x;
